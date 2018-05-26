@@ -58,8 +58,10 @@ class Application:
         wd = self.wd
         wd.find_element_by_link_text("Logout").click()
 
+
     def destroy(self):
         self.wd.quit()
+
 
     def create_new_contact(self, contact):
         wd = self.wd
