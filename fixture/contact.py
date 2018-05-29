@@ -31,3 +31,13 @@ class ContactHelper:
         wd.find_element_by_name("email2").send_keys(contact.second_mail)
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.app.open_home_page()
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        self.app.open_home_page()
+        # select first contact
+        wd.find_element_by_name("selected[]").click()
+        # submit deletions
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.switch_to_alert().accept()
+        self.app.open_home_page()
