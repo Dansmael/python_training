@@ -74,7 +74,7 @@ class ContactHelper:
         self.app.open_home_page()
 
 
-    def edit_det(self, contact):
+    def edit_by_details(self, contact):
         wd = self.app.wd
         # select first contact - edit by details icon
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[7]/a/img").click()
