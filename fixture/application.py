@@ -7,7 +7,7 @@ class Application:
 
     def __init__(self):
         self.wd = WebDriver(capabilities={"marionette": False})
-        self.wd.implicitly_wait(5)
+#        self.wd.implicitly_wait(5)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
@@ -23,6 +23,8 @@ class Application:
 
     def open_home_page(self):
         wd = self.wd
+        if len(wd.find_elements_by_name(name="searchstring"))>0:
+            return
         wd.get("http://localhost/addressbook/")
 
 

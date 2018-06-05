@@ -12,6 +12,7 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.app.open_home_page()
 
+
     def change_field_value(self, field_name, text):
         wd = self.app.wd
         if text is not None:
@@ -55,6 +56,7 @@ class ContactHelper:
 
     def edit_by_details(self, contact):
         wd = self.app.wd
+        self.app.open_home_page()
         # select first contact - edit by details icon
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[7]/a/img").click()
         wd.find_element_by_name("modifiy").click()
