@@ -1,5 +1,7 @@
 
 from model.contact import Contact
+from random import randrange
+
 class ContactHelper:
 
     def __init__(self, app):
@@ -36,9 +38,12 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
+        self.delete_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
+        wd = self.app.wd
         self.app.open_home_page()
-        # select first contact
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
         # submit deletions
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
@@ -46,11 +51,17 @@ class ContactHelper:
         self.contact_cache = None
 
 
-    def edit_link(self, contact):
+    def edit_first_link(self):
         wd = self.app.wd
         self.app.open_home_page()
-        # select first contact - edit by edit icon
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        wd.edit_link_by_index(0)
+        self.contact_cache = None
+
+
+    def edit_link_by_index(self, contact, index):
+        wd = self.app.wd
+        self.app.open_home_page()
+        wd.find_elements_by_css_selector('img[title="Edit"]')[index].click()
         # add new data
         self.fill_contact_form(contact)
         wd.find_element_by_xpath("//div[@id='content']/form[1]/input[22]").click()
@@ -62,7 +73,8 @@ class ContactHelper:
         wd = self.app.wd
         self.app.open_home_page()
         # select first contact - edit by details icon
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[7]/a/img").click()
+        wd.find_element_by_css_selector('img[title="Details"]').click()
+#       wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[7]/a/img").click()
         wd.find_element_by_name("modifiy").click()
         # add new data
         self.fill_contact_form(contact)

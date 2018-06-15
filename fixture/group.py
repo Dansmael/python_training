@@ -46,10 +46,20 @@ class GroupHelper:
         wd.find_element_by_name("selected[]").click()
 
 
-    def delete_first_group(self):
+    def select_group_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+
+    def delete_first_group(self, index):
+        wd = self.app.wd
+        self.delete_group_by_index(0)
+
+
+    def delete_group_by_index(self, index):
         wd = self.app.wd
         self.open_groups_page()
-        self.select_first_group()
+        self.select_group_by_index(index)
         # submit deletion
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
@@ -61,10 +71,15 @@ class GroupHelper:
         wd.find_element_by_link_text("group page").click()
 
 
-    def edit(self, group):
+    def edit_first_group(self, group):
+        wd = self.app.wd
+        self.edit_group_by_index(0)
+
+
+    def edit_group_by_index(self, group, index):
         wd = self.app.wd
         self.open_groups_page()
-        self.select_first_group()
+        self.select_group_by_index(index)
         wd.find_element_by_name("edit").click()
         # fill group form
         self.fill_group_form(group)
@@ -73,16 +88,16 @@ class GroupHelper:
         self.group_cache = None
 
 
-    def modify_first_group(self, new_group_data):
-        wd = self.app.wd
-        self.open_groups_page()
-        self.select_first_group()
-        wd.find_element_by_name("edit").click()
-        # fill group form
-        self.fill_group_form(new_group_data)
-        wd.find_element_by_name("update").click()
-        self.return_to_groups_page()
-        self.group_cache = None
+#   def modify_first_group(self, new_group_data):
+#        wd = self.app.wd
+#        self.open_groups_page()
+#        self.select_first_group()
+#        wd.find_element_by_name("edit").click()
+#        # fill group form
+#        self.fill_group_form(new_group_data)
+#        wd.find_element_by_name("update").click()
+#        self.return_to_groups_page()
+#        self.group_cache = None
 
 
     def count(self):
