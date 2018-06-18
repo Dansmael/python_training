@@ -8,7 +8,7 @@ def test_edit_link(app):
     old_contacts = app.contact.get_contact_list()
     index = randrange(len(old_contacts))
     contact = Contact(first_name="first name1", last_name="last name1", address="address",
-                               first_phone="+79991112233", second_phone="+79991112244", first_mail="mail@mail.ru",
+                      home_phone="+79991112233", mobile_phone="+79991112244", first_mail="mail@mail.ru",
                                second_mail="second mail2")
     contact.id = old_contacts[index].id
     app.contact.edit_link_by_index(contact, index)
