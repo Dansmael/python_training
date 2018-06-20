@@ -34,8 +34,9 @@ class ContactHelper:
         self.change_field_value("mobile", contact.mobile_phone)
         self.change_field_value("work", contact.work_phone)
         self.change_field_value("phone2", contact.secondary_phone)
-        self.change_field_value("email", contact.first_mail)
-        self.change_field_value("email2", contact.second_mail)
+        self.change_field_value("email", contact.email)
+        self.change_field_value("email2", contact.email2)
+        self.change_field_value("email3", contact.email3)
 
 
     def delete_first_contact(self):

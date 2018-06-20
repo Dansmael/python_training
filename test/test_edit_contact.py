@@ -8,8 +8,8 @@ def test_edit_link(app):
     old_contacts = app.contact.get_contact_list()
     index = randrange(len(old_contacts))
     contact = Contact(first_name="first name1", last_name="last name1", address="address",
-                      home_phone="+79991112233", mobile_phone="+79991112244", first_mail="mail@mail.ru",
-                               second_mail="second mail2")
+                      home_phone="+79991112233", mobile_phone="+79991112244", email="mail@mail.ru",
+                               email2="second mail2")
     contact.id = old_contacts[index].id
     app.contact.edit_link_by_index(contact, index)
     assert len(old_contacts) == app.contact.count()
