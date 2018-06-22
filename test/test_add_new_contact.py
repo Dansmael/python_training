@@ -21,13 +21,12 @@ def random_email(prefix, maxlen):
 testdata= [Contact(first_name=random_string("first name", 10), last_name=random_string("last name", 10),
                   address=random_string("address", 20),
                   home_phone=random_phone("home_phone", 17), mobile_phone=random_phone("mobile_phone", 17),
-                  work_phone=random_phone("work_phone", 17), secondary_phone=random_phone("secondary_phone", 17))
-#                  email=random_email("email", 20), email2=random_email("email2", 20), email3=random_email("email3", 20))
-           for i in range(4)
-]
+                  work_phone=random_phone("work_phone", 17), secondary_phone=random_phone("secondary_phone", 17),
+                  email=random_email("email", 20), email2=random_email("email2", 20), email3=random_email("email3", 20))
+           for i in range(4)]
+
 
 @pytest.mark.parametrize("contact", testdata, ids=[repr(x) for x in testdata])
-
 def test_add_new_contact(app, contact):
     old_contacts = app.contact.get_contact_list()
     app.contact.create(contact)
