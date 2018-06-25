@@ -9,9 +9,9 @@ class Application:
         if browser == "firefox":
             self.wd = webdriver.Firefox(capabilities={"marionette": False})
         elif browser == "chrome":
-            self.wd = webdriver.Chrome
+            self.wd = webdriver.Chrome()
         elif browser == "ie":
-            self.wd = webdriver.Ie
+            self.wd = webdriver.Ie()
         else:
             raise ValueError("Unrecognized browser %s" % browser)
 #        self.wd.implicitly_wait(5)
