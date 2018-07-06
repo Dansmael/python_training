@@ -20,6 +20,7 @@ def load_config(file):
             target = json.load(cf)
     return target
 
+
 @pytest.fixture
 def app(request):
     global fixture
@@ -35,7 +36,7 @@ def app(request):
 def db(request):
     db_config = load_config(request.config.getoption("--target"))['db']
     dbfixture = DbFixture(host=db_config['host'], name=db_config['name'],
-                          username=db_config['username'], password=db_config['password'])
+                          user=db_config['user'], password=db_config['password'])
     def fin():
         dbfixture.destroy()
     request.addfinalizer(fin)

@@ -4,12 +4,12 @@ from model.group import Group
 
 class DbFixture:
 
-    def __int__(self, host, name, username, password):
+    def __int__(self, host, name, user, password):
         self.host = host
         self.name = name
-        self.username = username
+        self.user = user
         self.password = password
-        self.connection = pymysql.connect(host=host, database=name, username=username, password=password)
+        self.connection = pymysql.connect(host=host, database=name, user=user, password=password)
 
 
     def get_group_list(self):
