@@ -8,7 +8,7 @@ def test_edit_group(app, db):
     old_groups = db.get_group_list()
     group = random.choice(old_groups)
 #    index = randrange(len(old_groups))
-    group_data = Group(name="New group - changed", header="header - changed", footer="footer - changed")
+    group_data = Group(name="New group-changed", header="header-changed", footer="footer-changed")
 #    group.id = old_groups[index].id
     app.group.edit_group_by_id(group.id, group_data)
     assert len(old_groups) == app.group.count()
