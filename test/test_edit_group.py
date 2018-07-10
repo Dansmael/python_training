@@ -13,6 +13,7 @@ def test_edit_group(app, db):
     app.group.edit_group_by_id(group.id, group_data)
     assert len(old_groups) == app.group.count()
     new_groups = db.get_group_list()
+    old_groups.remove(group)
     old_groups.append(group_data)
     assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
 
