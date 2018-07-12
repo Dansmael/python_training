@@ -172,3 +172,14 @@ class ContactHelper:
         wd.switch_to_alert().accept()
         self.app.open_home_page()
         self.contact_cache = None
+
+
+    def edit_link_by_id(self, id, contact):
+        wd = self.app.wd
+        self.app.open_home_page()
+        wd.find_element_by_xpath("//a[contains(@href, %s) and contains(@href, 'edit.php?id=')]" % id).click()
+        # add new data
+        self.fill_contact_form(contact)
+        wd.find_element_by_xpath("//div[@id='content']/form[1]/input[22]").click()
+        self.app.open_home_page()
+        self.contact_cache = None
