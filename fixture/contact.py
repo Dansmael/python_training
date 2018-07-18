@@ -183,3 +183,23 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form[1]/input[22]").click()
         self.app.open_home_page()
         self.contact_cache = None
+
+
+    def add_contact_to_group(self,contact_id, group_id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
+        wd.find_element_by_css_selector('select[name="to_group"]>option[value="%s"]' % group_id).click()
+        wd.find_element_by_css_selector("input[value='Add to']").click()
+        self.app.open_home_page()
+        self.contact_cache = None
+
+
+    def del_contact_from_group(self,contact_id, group_id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        wd.find_element_by_css_selector('select[name="group"]>option[value="%s"]' % group_id).click()
+        wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
+        wd.find_element_by_css_selector("input[name='remove']").click()
+        self.app.open_home_page()
+        self.contact_cache = None
