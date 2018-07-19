@@ -185,6 +185,29 @@ class ContactHelper:
         self.contact_cache = None
 
 
+    def select_group_to_view_contacts(self,group_id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector('select[name="group"]>option[value="%s"]' % group_id).click()
+
+    def get_contact_list_from_group_page(self, group_id):
+        if self.contact_cache is None:
+            wd = self.app.wd
+            self.select_group_to_view_contacts(group_id)
+            self.contact_cache = []
+            for row in wd.find_elements_by_name("entry"):
+                cells = row.find_elements_by_tag_name("td")
+                id = cells[0].find_element_by_tag_name("input").get_attribute("value")
+                lastname = cells[1].text
+                firstname = cells[2].text
+                address = cells[3].text
+                all_phones = cells[5].text
+                all_mails = cells[4].text
+                self.contact_cache.append(Contact(id=id, last_name=lastname, first_name=firstname, address=address,
+                                                      all_phones_from_homepage=all_phones,
+                                                      all_mails_from_homepage=all_mails))
+        return self.contact_cache
+
+
     def add_contact_to_group(self,contact_id, group_id):
         wd = self.app.wd
         self.app.open_home_page()
