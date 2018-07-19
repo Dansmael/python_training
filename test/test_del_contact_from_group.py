@@ -20,12 +20,11 @@ def test_del_contact_from_group(app, db):
     for g in group_list:
         if len(orm.get_contacts_in_group(g)) != 0:
             group_with_contacts.append(g)
-        return list(group_with_contacts)
-
     if len(group_with_contacts) == 0:
         contact = random.choice(contact_list)
         group = random.choice(group_list)
         app.contact.add_contact_to_group(contact.id, group.id)
+        group_with_contacts.append(group)
 
     test_group = random.choice(group_with_contacts)
     test_contact = random.choice(orm.get_contacts_in_group(test_group))
