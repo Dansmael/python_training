@@ -144,3 +144,4 @@ class GroupHelper:
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
         self.group_cache = None
+
