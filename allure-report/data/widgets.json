@@ -11,16 +11,16 @@
         "broken" : 0
       },
       "time" : {
-        "start" : 1532507794641,
-        "stop" : 1532507809689,
-        "duration" : 15048
+        "start" : 1532526156727,
+        "stop" : 1532526192694,
+        "duration" : 35967
       }
     },
     "defects" : {
       "totalCount" : 1,
       "items" : [ {
         "count" : 1,
-        "uid" : "2e65361c6886c55e",
+        "uid" : "774965724c5ee635",
         "message" : "AssertionError: assert [176:name1:he...f:footer, ...] == [176:name1:hea...f:footer, ...]\n  Left contains more items, first extra item: None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\\\n  Use -v to get the full diff",
         "status" : "FAILED"
       } ]
@@ -28,7 +28,7 @@
     "xunit" : {
       "totalCount" : 1,
       "items" : [ {
-        "uid" : "d094927e35711a65",
+        "uid" : "6774f104a89f9ca4",
         "title" : "Test add group",
         "statistic" : {
           "total" : 6,

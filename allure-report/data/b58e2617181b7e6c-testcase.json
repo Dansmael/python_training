@@ -1,0 +1,95 @@
+{
+  "uid" : "b58e2617181b7e6c",
+  "name" : "test_add_group[None:namemP&X ] MQ:headerbS={cv8:footerQpV\"]",
+  "title" : "Test add group [None:namemP&X ] MQ:headerbS={cv8:footerQpV\"]",
+  "time" : {
+    "start" : 1532526188131,
+    "stop" : 1532526189464,
+    "duration" : 1333
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "6774f104a89f9ca4",
+    "name" : "test_add_group",
+    "title" : "Test add group"
+  },
+  "steps" : [ {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1532526188246,
+      "stop" : 1532526188250,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add a group None:namemP&X ] MQ:headerbS={cv8:footerQpV\" to the list",
+    "title" : "When I add a group None:namemP&X ] MQ:headerbS={cv8:footerQpV\" to the list",
+    "time" : {
+      "start" : 1532526188250,
+      "stop" : 1532526189459,
+      "duration" : 1209
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the group list is equal to the old list with the added group",
+    "title" : "Then the group list is equal to the old list with the added group",
+    "time" : {
+      "start" : 1532526189459,
+      "stop" : 1532526189463,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_add_group"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "Юра-ПК"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "7664-MainThread"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

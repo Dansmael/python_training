@@ -2,70 +2,70 @@
   "hosts" : [ {
     "title" : "Юра-ПК",
     "threads" : [ {
-      "title" : "8260-MainThread",
+      "title" : "7664-MainThread",
       "testCases" : [ {
-        "uid" : "53d3d3d126b86311",
+        "uid" : "ea32a567514a1bb4",
         "name" : "test_add_group[None:::]",
         "title" : "Test add group [None:::]",
         "time" : {
-          "start" : 1532507794641,
-          "stop" : 1532507803996,
-          "duration" : 9355
+          "start" : 1532526156727,
+          "stop" : 1532526185121,
+          "duration" : 28394
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "7bef02f91895ae6a",
+        "uid" : "e29c48a566ecaa92",
         "name" : "test_add_group[None:namep0\\\\f :header:t <  @:footerA]",
         "title" : "Test add group [None:namep0\\\\f :header:t <  @:footerA]",
         "time" : {
-          "start" : 1532507804023,
-          "stop" : 1532507805076,
-          "duration" : 1053
+          "start" : 1532526185221,
+          "stop" : 1532526186656,
+          "duration" : 1435
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "92dc0043586aa8e8",
+        "uid" : "bab7bfb4c4d0b55c",
         "name" : "test_add_group[None:nameS7R9|p+:header:footerYn-]",
         "title" : "Test add group [None:nameS7R9|p+:header:footerYn-]",
         "time" : {
-          "start" : 1532507805077,
-          "stop" : 1532507806154,
-          "duration" : 1077
+          "start" : 1532526186657,
+          "stop" : 1532526188130,
+          "duration" : 1473
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "bac5f215e63b332e",
+        "uid" : "b58e2617181b7e6c",
         "name" : "test_add_group[None:namemP&X ] MQ:headerbS={cv8:footerQpV\"]",
         "title" : "Test add group [None:namemP&X ] MQ:headerbS={cv8:footerQpV\"]",
         "time" : {
-          "start" : 1532507806156,
-          "stop" : 1532507807444,
-          "duration" : 1288
+          "start" : 1532526188131,
+          "stop" : 1532526189464,
+          "duration" : 1333
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "d76fe612b0e2ba43",
+        "uid" : "632a9ffad41e9d1b",
         "name" : "test_add_group[None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\\\\]",
         "title" : "Test add group [None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\\\\]",
         "time" : {
-          "start" : 1532507807445,
-          "stop" : 1532507808646,
-          "duration" : 1201
+          "start" : 1532526189465,
+          "stop" : 1532526190854,
+          "duration" : 1389
         },
         "severity" : "NORMAL",
         "status" : "FAILED"
       }, {
-        "uid" : "3e6ea740b235ee69",
+        "uid" : "17d613cac03ee714",
         "name" : "test_add_group[None:name:headerdf:footer]",
         "title" : "Test add group [None:name:headerdf:footer]",
         "time" : {
-          "start" : 1532507808648,
-          "stop" : 1532507809689,
-          "duration" : 1041
+          "start" : 1532526190855,
+          "stop" : 1532526192694,
+          "duration" : 1839
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
