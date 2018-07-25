@@ -1,0 +1,92 @@
+{
+  "features" : [ {
+    "title" : "Without feature",
+    "statistic" : {
+      "total" : 6,
+      "passed" : 5,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 1,
+      "broken" : 0
+    },
+    "stories" : [ {
+      "uid" : "65d37fdd45ffcb81",
+      "title" : "Without story",
+      "statistic" : {
+        "total" : 6,
+        "passed" : 5,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 1,
+        "broken" : 0
+      },
+      "testCases" : [ {
+        "uid" : "53d3d3d126b86311",
+        "name" : "test_add_group[None:::]",
+        "title" : "Test add group [None:::]",
+        "time" : {
+          "start" : 1532507794641,
+          "stop" : 1532507803996,
+          "duration" : 9355
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "7bef02f91895ae6a",
+        "name" : "test_add_group[None:namep0\\\\f :header:t <  @:footerA]",
+        "title" : "Test add group [None:namep0\\\\f :header:t <  @:footerA]",
+        "time" : {
+          "start" : 1532507804023,
+          "stop" : 1532507805076,
+          "duration" : 1053
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "92dc0043586aa8e8",
+        "name" : "test_add_group[None:nameS7R9|p+:header:footerYn-]",
+        "title" : "Test add group [None:nameS7R9|p+:header:footerYn-]",
+        "time" : {
+          "start" : 1532507805077,
+          "stop" : 1532507806154,
+          "duration" : 1077
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "bac5f215e63b332e",
+        "name" : "test_add_group[None:namemP&X ] MQ:headerbS={cv8:footerQpV\"]",
+        "title" : "Test add group [None:namemP&X ] MQ:headerbS={cv8:footerQpV\"]",
+        "time" : {
+          "start" : 1532507806156,
+          "stop" : 1532507807444,
+          "duration" : 1288
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "d76fe612b0e2ba43",
+        "name" : "test_add_group[None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\\\\]",
+        "title" : "Test add group [None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\\\\]",
+        "time" : {
+          "start" : 1532507807445,
+          "stop" : 1532507808646,
+          "duration" : 1201
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "3e6ea740b235ee69",
+        "name" : "test_add_group[None:name:headerdf:footer]",
+        "title" : "Test add group [None:name:headerdf:footer]",
+        "time" : {
+          "start" : 1532507808648,
+          "stop" : 1532507809689,
+          "duration" : 1041
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      } ]
+    } ]
+  } ]
+}

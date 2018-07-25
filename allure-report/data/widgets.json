@@ -1,0 +1,59 @@
+{
+  "hash" : "e7105c43ada45c9f6e0006854ef1a1d95249231d",
+  "plugins" : {
+    "total" : {
+      "statistic" : {
+        "total" : 6,
+        "passed" : 5,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 1,
+        "broken" : 0
+      },
+      "time" : {
+        "start" : 1532507794641,
+        "stop" : 1532507809689,
+        "duration" : 15048
+      }
+    },
+    "defects" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "count" : 1,
+        "uid" : "2e65361c6886c55e",
+        "message" : "AssertionError: assert [176:name1:he...f:footer, ...] == [176:name1:hea...f:footer, ...]\n  Left contains more items, first extra item: None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\\\n  Use -v to get the full diff",
+        "status" : "FAILED"
+      } ]
+    },
+    "xunit" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "uid" : "d094927e35711a65",
+        "title" : "Test add group",
+        "statistic" : {
+          "total" : 6,
+          "passed" : 5,
+          "pending" : 0,
+          "canceled" : 0,
+          "failed" : 1,
+          "broken" : 0
+        }
+      } ]
+    },
+    "behaviors" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "title" : "Without feature",
+        "statistic" : {
+          "total" : 6,
+          "passed" : 5,
+          "pending" : 0,
+          "canceled" : 0,
+          "failed" : 1,
+          "broken" : 0
+        }
+      } ]
+    },
+    "environment" : [ ]
+  }
+}

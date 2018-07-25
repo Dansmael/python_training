@@ -1,0 +1,101 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532507794641" stop="1532507809689">
+  <name>test_add_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532507794641" status="passed" stop="1532507803996">
+      <name>test_add_group[None:::]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8260-MainThread"/>
+        <label name="host" value="Юра-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532507804023" status="passed" stop="1532507805076">
+      <name>test_add_group[None:namep0\\f :header:t &lt;  @:footerA]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8260-MainThread"/>
+        <label name="host" value="Юра-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532507805077" status="passed" stop="1532507806154">
+      <name>test_add_group[None:nameS7R9|p+:header:footerYn-]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8260-MainThread"/>
+        <label name="host" value="Юра-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532507806156" status="passed" stop="1532507807444">
+      <name>test_add_group[None:namemP&amp;X ] MQ:headerbS={cv8:footerQpV"]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8260-MainThread"/>
+        <label name="host" value="Юра-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532507807445" status="failed" stop="1532507808646">
+      <name>test_add_group[None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\\]</name>
+      <failure>
+        <message>AssertionError: assert [176:name1:he...f:footer, ...] == [176:name1:hea...f:footer, ...]
+  Left contains more items, first extra item: None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\
+  Use -v to get the full diff</message>
+        <stack-trace>app = &lt;fixture.application.Application object at 0x03822050&gt;
+db = &lt;fixture.db.DbFixture object at 0x037F4CB0&gt;
+json_groups = None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\
+check_ui = False
+
+    def test_add_group(app, db, json_groups, check_ui):
+        group = json_groups
+        old_groups = db.get_group_list()
+        app.group.create(group)
+    #    assert len(old_groups) + 1 == app.group.count()
+        new_groups = db.get_group_list()
+        old_groups.append(group)
+&gt;       assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
+E       assert [176:name1:he...f:footer, ...] == [176:name1:hea...f:footer, ...]
+E         Left contains more items, first extra item: None:name5.R TNQQ:header,( uP7-+p,i]:footerss[st=aJO\
+E         Use -v to get the full diff
+
+test\test_add_group.py:13: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8260-MainThread"/>
+        <label name="host" value="Юра-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532507808648" status="passed" stop="1532507809689">
+      <name>test_add_group[None:name:headerdf:footer]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8260-MainThread"/>
+        <label name="host" value="Юра-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
